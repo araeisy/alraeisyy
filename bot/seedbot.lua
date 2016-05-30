@@ -226,101 +226,169 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {195801672},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
+    about_text = [[> TeleAgent For Super GP
+>  Anti spam bot in Lua
+> German Server
 
-https://github.com/SEEDTEAM/TeleSeed
+> with lots of COOL stuffs!  ⚙
+from now on you can have your own ANTI SPAM Group! just contact to our SUDO for buying GP!🎁
+dont forget to visit our channel : @TeleAgent_Team
 
-Our team!
-Alphonse (@Iwals)
-I M /-\ N (@Imandaneshi)
-Siyanew (@Siyanew)
-Rondoozle (@Potus)
-Seyedan (@Seyedan25)
+Our Team: 👥
+@XHACKERX
+@AryanAvast
+@AttackerTeleAgent
+@SiIencer
+@aidin009
+@CLieNT
+@VAMPAYER10
+@Telearm
 
-Special thanks to:
-Juan Potato
-Siyanew
-Topkecleon
-Vamptacus
-
-Our channels:
-English: @TeleSeedCH
-Persian: @IranSeed
+< TeleAgent , Group Manager >
 ]],
     help_text_realm = [[
-Realm Commands:
+⚙ لیست کامند های سوپر گروه
 
-!creategroup [name]
-Create a group
+🌟 !info
+تمامی اطلاعات راجبع سوپر گروه را نشان میدهد
 
-!createrealm [name]
-Create a realm
+🌟 !admins
+لیست ادمین های سوپر گروه
 
-!setname [name]
-Set realm name
+🌟!owner
+نام صاحب سوپر گروه
 
-!setabout [group_id] [text]
-Set a group's about text
+🌟 !modlist
+لیست مدیر های سوپر گروه
 
-!setrules [grupo_id] [text]
-Set a group's rules
+🌟!bots
+لیست بات های سوپر گروه
 
-!lock [grupo_id] [setting]
-Lock a group's setting
+🌟!who
+لیست تمامی افراد عضو سوپر گروه
 
-!unlock [grupo_id] [setting]
-Unock a group's setting
+🌟 !block
+اخراج کردن و بن کردن یک یوزر از سوپر گروه (بصورت رسمی از سوی تلگرام)
 
-!wholist
-Get a list of members in group/realm
+🌟 !ban
+بن کردن یک نفر از سوپرگروه (بصورت غیر رسمی از سمت بات)
 
-!who
-Get a file of members in group/realm
+🌟 !unban
+آن بن کردن یک نفر از سوپر گروه
 
-!type
-Get group type
+🌟 !id
+نشان دادن آیدی سوپر گروه / آیدی شخص
+- برای ایدی یوزر ها: !id @UserName
 
-!kill chat [grupo_id]
-Kick all memebers and delete group
+🌟 !id from
+دریافت آیدی از پیامی که فوروارد شده
 
-!kill realm [realm_id]
-Kick all members and delete realm
+🌟 !kickme
+اخراج کردن یک نفر از سوپر گروه
 
-!addadmin [id|username]
-Promote an admin by id OR username *Sudo only
+🌟 !setowner
+تعویض صاحب سوپر گروه
 
-!removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
+🌟 !promote [username|id]
+ترفیع درجه یک فرد به مدیر
 
-!list groups
-Get a list of all groups
+🌟 !demote [username|id]
+تنزیل درجه یک فرد به عضو معمولی
 
-!list realms
-Get a list of all realms
+🌟 !setname
+تعویض نام سوپر گروه
 
-!log
-Get a logfile of current group or realm
+🌟 !setphoto
+تعویض عکس سوپر گروه
 
-!broadcast [text]
-!broadcast Hello !
-Send text to all groups
-» Only sudo users can run this command
+🌟 !setrules
+نوشتن قوانین سوپر گروه
 
-!bc [group_id] [text]
-!bc 123456789 Hello !
-This command will send text to [group_id]
+🌟!setabout
+نوشتن "درباره" سوپر گروه (بالای لیست ممبر ها می آید)
 
-» U can use both "/" and "!" 
+🌟 !save [value] <text>
+ذخیره سازی  اطلاعات اضافه در رابطه با چت
 
-» Only mods, owner and admin can add bots in group
+🌟 !get [value]
+دریافت همون چیزی که تو کامند بالایی ست کردید 😐
 
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+🌟 !newlink
+ساخت لینک جدید
 
-» Only owner can use res,setowner,promote,demote and log commands
+🌟 !link
+دریافت لینک گروه
+
+🌟 !rules
+مشاهده قوانین گروه
+
+🌟 !lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+قفل کردن ستینگ گروه
+*RTL = راست چین (پیام های از راست به چپ)*
+*strict: enable strict settings enforcement (violating user will be kicked)*
+
+🌟 !unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+باز کردن ستینگ گروه
+*RTL = راست چین (پیام های از راست به چپ)*
+*strict: disable strict settings enforcement (violating user will not be kicked)*
+
+🌟 !mute [all|audio|gifs|photo|video|service]
+میوت (خفه) کردن
+- پیام های میوت شده درجا پاک میشوند
+
+🌟 !unmute [all|audio|gifs|photo|video|service]
+آن میوت کردن
+🌟 !setflood [value]
+ست کردن تعداد پیام های پشت سر هم تا یوزر کیک شود
+- مثلا اگر 10 باشد, فردی 10 پیام پشت هم بفرستد, کیک میشود.
+
+🌟 !settings
+دریافت ستینگ سوپر گروه
+
+🌟 !muteslist
+نشان دادن میوت های سوپر گروه
+
+🌟 !muteuser [username]
+خفه کردن یک کاربر در سوپر گروه
+- اگر کاربر خفه شده پیامی بفرستد, درجا پیام حذف میگردد
+
+🌟 !mutelist
+لیست افراد میوت شده
+
+🌟 !banlist
+لیست افراد بن شده
+
+🌟 !clean [rules|about|modlist|mutelist]
+پاک کردن یکی از متغیر های بالا
+
+🌟 !del
+پاک کردن یک مسیج (ریپلای کنید)
+
+🌟 !public [yes|no]
+ویزیبیلیتی پیام ها
+
+🌟 !res [username]
+دریافت نام و آیدی یک یوزر با یوزرنیم (مثلا @UserName)
+
+
+🌟 !log
+دریافت لاگ گروه
+*مثلا سرچ کنید برای دلیل کیک شدن [#RTL|#spam|#lockmember]
+
+
+⭕️شما میتوانید از هر سه کاراکتر # و ! و / در آغاز کامند ها استفاده کنید.
+
+⭕️فقط صاحب سوپر گروه از طریق ادد ممبر میتواند کاربر ادد کند.
+
+⭕️فقط مدیر ها و صاحب سوپر گروه میتواند از بلاک, بن, آنبن, لینک جدید, دریافت لینک, ست کردن عکس, ست کردن نام, قفل, باز, ست کردن قوانین, ست کردن توضیحات و ستینگ استفاده کند.
+
+⭕️فقط صاحب گروه و ادمین ها میتواند از کامند های res, promote, setowner استفاده کند.
+
+
+Channel : @TeleAgent_Team
 
 ]],
     help_text = [[
