@@ -1,7 +1,7 @@
 
 do
-local MKH = 98120772 --put your id here(BOT OWNER ID)
-local PRS = 152065669 --PARSA id
+local SUDO = 195801672 --put your id here(BOT OWNER ID)
+local SUDO = 195801672 --PARSA id
 
 local function setrank(msg, name, value) -- setrank function
   local hash = nil
